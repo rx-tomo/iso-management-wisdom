@@ -1,8 +1,8 @@
 # iso-business-wisdom
 
-**ISO規格に基づく経営の叡智を、23の組織ロールで即座に活用する Claude Code スキル**
+**ISO規格に基づく経営の叡智を、23の組織ロールで即座に活用する Claude Code / Codex CLI スキル**
 
-**Instantly leverage ISO-standard-based management wisdom through 23 organizational roles — a skill for Claude Code**
+**Instantly leverage ISO-standard-based management wisdom through 23 organizational roles — a skill for Claude Code & Codex CLI**
 
 ---
 
@@ -73,7 +73,7 @@
 
 #### 前提条件
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic の CLI ツール) がインストール済みであること
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic の CLI ツール) または [Codex CLI](https://github.com/openai/codex) (OpenAI の CLI ツール) がインストール済みであること
 
 #### インストール
 
@@ -83,7 +83,7 @@ cd iso-management-wisdom
 ./install.sh
 ```
 
-`install.sh` は `skill/` ディレクトリを `~/.claude/skills/iso-management-wisdom/` にコピーします。
+`install.sh` は Claude Code (`~/.claude/skills/`) と Codex CLI (`~/.codex/skills/`) の両方に対応しています。
 
 #### 使い方
 
@@ -91,6 +91,12 @@ Claude Code のセッション内で以下のように呼び出します:
 
 ```
 /iso-management-wisdom 情報セキュリティポリシーを新規策定したい。中小企業向けで、クラウド利用が中心。
+```
+
+Codex CLI の場合:
+
+```
+$iso-management-wisdom 情報セキュリティポリシーを新規策定したい。中小企業向けで、クラウド利用が中心。
 ```
 
 ### 使用例
@@ -148,6 +154,8 @@ iso-business-wisdom/
 └── skill/
     └── iso-management-wisdom/
         ├── SKILL.md                   # スキル定義（Claude Code が読み込む）
+        ├── agents/
+        │   └── openai.yaml            # Codex CLI メタデータ
         └── references/
             ├── role-index.md          # ロール自動選定用インデックス
             ├── roles/                 # 23 ロールの知見ファイル
@@ -255,7 +263,7 @@ iso-business-wisdom/
 
 #### Prerequisites
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic's CLI tool) installed
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic's CLI tool) or [Codex CLI](https://github.com/openai/codex) (OpenAI's CLI tool) installed
 
 #### Installation
 
@@ -265,7 +273,7 @@ cd iso-management-wisdom
 ./install.sh
 ```
 
-`install.sh` copies the `skill/` directory to `~/.claude/skills/iso-management-wisdom/`.
+`install.sh` supports both Claude Code (`~/.claude/skills/`) and Codex CLI (`~/.codex/skills/`).
 
 #### Usage
 
@@ -273,6 +281,12 @@ Inside a Claude Code session:
 
 ```
 /iso-management-wisdom I need to create an information security policy for a 200-person company using cloud services extensively.
+```
+
+For Codex CLI:
+
+```
+$iso-management-wisdom I need to create an information security policy for a 200-person company using cloud services extensively.
 ```
 
 ### Usage Examples
@@ -327,6 +341,8 @@ iso-business-wisdom/
 └── skill/
     └── iso-management-wisdom/
         ├── SKILL.md              # Skill definition (loaded by Claude Code)
+        ├── agents/
+        │   └── openai.yaml       # Codex CLI メタデータ
         └── references/
             ├── role-index.md     # Role auto-selection index
             ├── roles/            # 23 role knowledge files
