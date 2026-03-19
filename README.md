@@ -1,8 +1,8 @@
-# iso-business-wisdom
+# iso-management-wisdom
 
-**ISO規格に基づく経営の叡智を、23の組織ロールで即座に活用する Claude Code / Codex CLI スキル**
+**ISO規格に基づく経営の叡智を、23の組織ロールで即座に活用する Claude Code スキル**
 
-**Instantly leverage ISO-standard-based management wisdom through 23 organizational roles — a skill for Claude Code & Codex CLI**
+**Instantly leverage ISO-standard-based management wisdom through 23 organizational roles — a skill for Claude Code**
 
 ---
 
@@ -29,7 +29,7 @@
 - **5 つのアクションモード** — 助言、文書生成、チェック/レビュー、インシデント対応、会議/プロセス設計
 - **6 つのテンプレート** — RACI マトリクス、リスク登録簿、ギャップ分析、会議設計、インシデント対応、ポリシードラフト
 - **複合ロール対応** — セキュリティ事故なら CISO + Legal + BCM のように複数ロールを自動組み合わせ
-- **日英バイリンガル** — キーワードマッチングは日本語・英語両対応
+- **日英バイリンガル** — キーワードマッチングは日本語・英語両対応。完全な英語版スキルファイルも利用可能
 
 ### 23 の専門ロール
 
@@ -73,17 +73,18 @@
 
 #### 前提条件
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic の CLI ツール) または [Codex CLI](https://github.com/openai/codex) (OpenAI の CLI ツール) がインストール済みであること
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic の CLI ツール) がインストール済みであること
 
 #### インストール
 
 ```bash
-git clone https://github.com/rx-tomo/iso-management-wisdom.git
+git clone https://github.com/<your-username>/iso-management-wisdom.git
 cd iso-management-wisdom
 ./install.sh
 ```
 
-`install.sh` は Claude Code (`~/.claude/skills/`) と Codex CLI (`~/.codex/skills/`) の両方に対応しています。
+`install.sh` は言語を選択してから `~/.claude/skills/iso-management-wisdom/` にコピーします。
+`--lang en` オプションで英語版をインストールできます（デフォルト: 日本語）。
 
 #### 使い方
 
@@ -91,12 +92,6 @@ Claude Code のセッション内で以下のように呼び出します:
 
 ```
 /iso-management-wisdom 情報セキュリティポリシーを新規策定したい。中小企業向けで、クラウド利用が中心。
-```
-
-Codex CLI の場合:
-
-```
-$iso-management-wisdom 情報セキュリティポリシーを新規策定したい。中小企業向けで、クラウド利用が中心。
 ```
 
 ### 使用例
@@ -147,48 +142,24 @@ GHG排出量の算定方法も含めて。
 ### ディレクトリ構成
 
 ```
-iso-business-wisdom/
-├── README.md                          # このファイル
-├── LICENSE                            # MIT License
-├── install.sh                         # インストールスクリプト
+iso-management-wisdom/
+├── README.md
+├── LICENSE
+├── install.sh
 └── skill/
     └── iso-management-wisdom/
-        ├── SKILL.md                   # スキル定義（Claude Code が読み込む）
-        ├── agents/
-        │   └── openai.yaml            # Codex CLI メタデータ
-        └── references/
-            ├── role-index.md          # ロール自動選定用インデックス
-            ├── roles/                 # 23 ロールの知見ファイル
-            │   ├── governance-ceo.md
-            │   ├── governance-board.md
-            │   ├── governance-internal-audit.md
-            │   ├── risk-erm.md
-            │   ├── risk-compliance.md
-            │   ├── risk-legal.md
-            │   ├── risk-bcm.md
-            │   ├── security-ciso.md
-            │   ├── security-privacy-dpo.md
-            │   ├── security-itsm.md
-            │   ├── ops-coo.md
-            │   ├── ops-pmo.md
-            │   ├── ops-pm.md
-            │   ├── ops-qms.md
-            │   ├── ops-procurement.md
-            │   ├── ops-customer-support.md
-            │   ├── ops-asset.md
-            │   ├── people-chro.md
-            │   ├── people-hr-analytics.md
-            │   ├── sustainability-esg.md
-            │   ├── sustainability-environment.md
-            │   ├── sustainability-energy.md
-            │   └── sustainability-innovation.md
-            └── templates/             # 6 テンプレート
-                ├── raci-matrix.md
-                ├── risk-register.md
-                ├── gap-analysis.md
-                ├── meeting-design.md
-                ├── incident-response.md
-                └── policy-draft.md
+        ├── ja/                        # 日本語版
+        │   ├── SKILL.md
+        │   └── references/
+        │       ├── role-index.md
+        │       ├── roles/ (23)
+        │       └── templates/ (6)
+        └── en/                        # English version
+            ├── SKILL.md
+            └── references/
+                ├── role-index.md
+                ├── roles/ (23)
+                └── templates/ (6)
 ```
 
 ### テンプレート一覧
@@ -219,7 +190,7 @@ iso-business-wisdom/
 - **5 action modes** — Advisory, Document Generation, Check/Review, Incident Response, Meeting/Process Design
 - **6 templates** — RACI matrix, Risk register, Gap analysis, Meeting design, Incident response, Policy draft
 - **Multi-role composition** — e.g., a security incident automatically combines CISO + Legal + BCM
-- **Bilingual** — Keyword matching supports both Japanese and English
+- **Bilingual** — Keyword matching supports both Japanese and English. Full English skill files are now available
 
 ### 23 Specialized Roles
 
@@ -263,17 +234,18 @@ iso-business-wisdom/
 
 #### Prerequisites
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic's CLI tool) or [Codex CLI](https://github.com/openai/codex) (OpenAI's CLI tool) installed
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic's CLI tool) installed
 
 #### Installation
 
 ```bash
-git clone https://github.com/rx-tomo/iso-management-wisdom.git
+git clone https://github.com/<your-username>/iso-management-wisdom.git
 cd iso-management-wisdom
 ./install.sh
 ```
 
-`install.sh` supports both Claude Code (`~/.claude/skills/`) and Codex CLI (`~/.codex/skills/`).
+`install.sh` prompts for language selection, then copies to `~/.claude/skills/iso-management-wisdom/`.
+Use `--lang en` to install the English version (default: Japanese).
 
 #### Usage
 
@@ -281,12 +253,6 @@ Inside a Claude Code session:
 
 ```
 /iso-management-wisdom I need to create an information security policy for a 200-person company using cloud services extensively.
-```
-
-For Codex CLI:
-
-```
-$iso-management-wisdom I need to create an information security policy for a 200-person company using cloud services extensively.
 ```
 
 ### Usage Examples
@@ -334,19 +300,24 @@ $iso-management-wisdom I need to create an information security policy for a 200
 ### Directory Structure
 
 ```
-iso-business-wisdom/
+iso-management-wisdom/
 ├── README.md
 ├── LICENSE
 ├── install.sh
 └── skill/
     └── iso-management-wisdom/
-        ├── SKILL.md              # Skill definition (loaded by Claude Code)
-        ├── agents/
-        │   └── openai.yaml       # Codex CLI メタデータ
-        └── references/
-            ├── role-index.md     # Role auto-selection index
-            ├── roles/            # 23 role knowledge files
-            └── templates/        # 6 document templates
+        ├── ja/                        # Japanese version
+        │   ├── SKILL.md
+        │   └── references/
+        │       ├── role-index.md
+        │       ├── roles/ (23)
+        │       └── templates/ (6)
+        └── en/                        # English version
+            ├── SKILL.md
+            └── references/
+                ├── role-index.md
+                ├── roles/ (23)
+                └── templates/ (6)
 ```
 
 ### Templates

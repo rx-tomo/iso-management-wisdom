@@ -37,7 +37,7 @@ ISO規格は広く一般化された経営の叡智である。
 複合的な課題（例: セキュリティ事故 → CISO + Legal + BCM）は複数ロールを組み合わせる。
 
 ### Step 3: ロール知見の読み込み
-選定したロールの `references/roles/role-*.md` を読み込み、
+選定したロールの `references/roles/*.md`（例: `governance-ceo.md`, `security-ciso.md`）を読み込み、
 該当ISO規格の要求事項・チェック項目を取得する。
 
 ### Step 4: アクション実行（5モード）

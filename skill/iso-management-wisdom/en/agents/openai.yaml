@@ -1,0 +1,4 @@
+interface:
+  display_name: "ISO Management Wisdom"
+  short_description: "Instantly leverage management wisdom based on ISO standards through 23 specialized roles"
+  default_prompt: "Analyze organizational management challenges based on ISO standards knowledge, automatically select the optimal role (CEO/CISO/QMS/PMO, etc.), and execute advisory, document generation, compliance checks, incident response, and meeting design."
