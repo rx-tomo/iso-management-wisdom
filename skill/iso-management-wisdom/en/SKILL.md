@@ -7,7 +7,7 @@ description: >-
   response, gap analysis, RACI creation, BCP, and procurement evaluation.
   Addresses any organizational challenge through the expertise of 23 specialist
   roles (CEO/CISO/QMS/PMO, etc.). Also applicable to code review, documentation,
-  and organizational design.
+  organizational design, and AI operating harness governance.
 ---
 
 # ISO Management Wisdom
@@ -23,6 +23,7 @@ and converting it immediately into actionable output.
 - Preparing for audits, reviews, or management meetings; checking for gaps
 - Designing responses to incidents, accidents, or compliance breaches
 - Reviewing codebases or documentation from an ISO perspective
+- Designing AI agent operating policy, approval boundaries, review cadence, or guardrails
 - Comprehensive checks when "unsure what to consider"
 - Situations requiring expert judgment in security, quality, compliance, ESG, etc.
 
@@ -33,6 +34,7 @@ Identify the following from the user's request:
 - **Target domain**: What is the request about? (security / quality / HR / ESG, etc.)
 - **Action type**: What does the user want to do? (one of the 5 modes below)
 - **Scope**: Target organization / business area / time period
+- **Autonomy boundary**: What the AI may do autonomously, what requires approval, and what must stop
 - If anything is unclear, ask the user (up to 3 questions)
 
 ### Step 2: Automatic Role Selection
@@ -52,6 +54,7 @@ retrieve the relevant ISO standard requirements and checklist items.
 #### Mode B: Document Generation
 "I want to create a policy" / "I need a RACI chart" / "I want to write a procedure"
 -> Generate a draft using `references/templates/` templates + ISO requirements.
+-> Also applicable to AI operating policies, decision rights matrices, risk registers, and review design.
 
 #### Mode C: Check & Review
 "I want to audit the current state" / "Audit preparation" / "Review code from an ISO perspective"
@@ -64,6 +67,7 @@ retrieve the relevant ISO standard requirements and checklist items.
 #### Mode E: Meeting & Process Design
 "Design a management review" / "Agenda for a regular meeting"
 -> Produce an ISO clause-based agenda, frequency plan, and minutes template.
+-> Also applicable to AI operations reviews, approval flows, and escalation bodies.
 
 ### Step 5: Verification
 - Confirm that key requirements are reflected in the deliverables

@@ -6,7 +6,7 @@
 
 #### CEO (governance-ceo.md)
 - **主要ISO**: ISO 37000:2021, ISO 31000:2018, ISO 37001:2025, ISO/IEC 38500:2024, ISO/IEC 27001:2022, ISO/IEC 42001:2023, ISO 21504:2022, ISO 26000:2010, ISO 56001:2024, ISO/UNDP DIS 53001
-- **トリガーキーワード（日）**: 経営方針, 戦略, 全社統括, 経営判断, トップマネジメント, 方針承認, 経営レビュー, 資源配分, 投資判断, マネジメントレビュー, 社会的責任, SDGs, AI方針, イノベーション方針, ガバナンス方針, 贈収賄防止
+- **トリガーキーワード（日）**: 経営方針, 戦略, 全社統括, 経営判断, トップマネジメント, 方針承認, 経営レビュー, 資源配分, 投資判断, マネジメントレビュー, 社会的責任, SDGs, AI方針, イノベーション方針, ガバナンス方針, 贈収賄防止, AIガバナンス, エージェント方針, 運用憲章
 - **トリガーキーワード（英）**: strategy, executive, top management, policy approval, management review, resource allocation, investment decision, governance, anti-bribery, AI policy, SDGs
 - **専門性**: 方針と優先順位を決め、資源配分できる / 重要リスクの受容/回避/軽減の判断ができる / 仕組みを"回す"執行力（会議体/レビュー）
 
@@ -26,7 +26,7 @@
 
 #### リスク管理（ERM） (risk-erm.md)
 - **主要ISO**: ISO 31000:2018, ISO/IEC 27001:2022, ISO/IEC 42001:2023, ISO 31022:2020, ISO 55001:2024, ISO 37003:2025, IEC 31010:2019, ISO/IEC 27005:2022, ISO 14090:2019, ISO 14091:2021
-- **トリガーキーワード（日）**: リスク管理, リスク評価, リスク基準, リスク登録簿, 受容基準, エスカレーション, 全社リスク, 法務リスク, 不正リスク, AIリスク, 気候変動リスク, 脆弱性評価, リスクアセスメント, リスク対応, リスクマトリクス
+- **トリガーキーワード（日）**: リスク管理, リスク評価, リスク基準, リスク登録簿, 受容基準, エスカレーション, 全社リスク, 法務リスク, 不正リスク, AIリスク, 気候変動リスク, 脆弱性評価, リスクアセスメント, リスク対応, リスクマトリクス, リスク許容度, 停止条件, ガードレール
 - **トリガーキーワード（英）**: risk management, ERM, risk assessment, risk register, risk appetite, risk criteria, risk treatment, enterprise risk, fraud risk, climate risk, vulnerability assessment
 - **専門性**: リスク基準（尺度/受容基準）設計 / 登録簿の運用（レビュー/是正/エスカレーション） / 全社横断でのリスク統合（事業/法務/IT/ESG）
 
@@ -52,7 +52,7 @@
 
 #### CISO/ISMS (security-ciso.md)
 - **主要ISO**: ISO/IEC 38500:2024, ISO/IEC 27001:2022, ISO/IEC 42001:2023, ISO/IEC 27701:2025, ISO/IEC 20000-1:2018, ISO/IEC 27002:2022, ISO/IEC 27005:2022, ISO/IEC 27014:2020, ISO/IEC 27035-1:2023, ISO/IEC 27032:2023, ISO/IEC 27034-1:2011, ISO/IEC 27017:2015, ISO/IEC 27018:2025, ISO/IEC 27036-2:2022, ISO/IEC 27036-3:2023
-- **トリガーキーワード（日）**: 情報セキュリティ, ISMS, CISO, リスクベース統制, SoA, 管理策, インシデント対応, セキュリティポリシー, クラウドセキュリティ, サプライチェーンセキュリティ, アプリケーションセキュリティ, 脆弱性, PII保護, AI統制, 変更管理, セキュリティコードレビュー, ペネトレーションテスト
+- **トリガーキーワード（日）**: 情報セキュリティ, ISMS, CISO, リスクベース統制, SoA, 管理策, インシデント対応, セキュリティポリシー, クラウドセキュリティ, サプライチェーンセキュリティ, アプリケーションセキュリティ, 脆弱性, PII保護, AI統制, 変更管理, セキュリティコードレビュー, ペネトレーションテスト, 承認境界, 実行統制
 - **トリガーキーワード（英）**: information security, ISMS, CISO, SoA, controls, incident response, security policy, cloud security, supply chain security, application security, vulnerability, penetration test, cyber security, AI governance
 - **専門性**: リスクベースで統制（コントロール）を設計 / インシデント対応・演習・改善の運用 / 監査対応（証跡・SoA・レビュー）
 
@@ -78,7 +78,7 @@
 
 #### PMO/ポートフォリオ (ops-pmo.md)
 - **主要ISO**: ISO 21502:2020, ISO 21503:2022, ISO 21504:2022, ISO 21505:2017, ISO 21500:2021, ISO 21506:2024, ISO 21508:2018, ISO 21511:2018, ISO 21512:2024
-- **トリガーキーワード（日）**: PMO, ポートフォリオ, 投資判断, 優先順位, プログラム管理, EVM, WBS, 出来高管理, 標準テンプレート, 中止判断, プロジェクトガバナンス, ベネフィット管理
+- **トリガーキーワード（日）**: PMO, ポートフォリオ, 投資判断, 優先順位, プログラム管理, EVM, WBS, 出来高管理, 標準テンプレート, 中止判断, プロジェクトガバナンス, ベネフィット管理, レビュー会議体, 承認フロー
 - **トリガーキーワード（英）**: PMO, portfolio management, program management, EVM, WBS, investment decision, earned value, benefit management, project governance
 - **専門性**: 投資判断の枠組み（優先度/中止/便益） / 横断テンプレ/標準の整備と定着 / 経営レビューへ情報を集約できる
 
@@ -90,7 +90,7 @@
 
 #### 品質管理（QMS） (ops-qms.md)
 - **主要ISO**: ISO 19011:2018, ISO 9001:2015, ISO 21502:2020, ISO 10002:2018, ISO 10004:2018, ISO 30401:2018, IEC 31010:2019, ISO 10001:2018, ISO 18295-1:2017, ISO 9004:2018
-- **トリガーキーワード（日）**: 品質管理, QMS, 品質方針, 品質目標, CAPA, 是正処置, 不適合, プロセス管理, 顧客要求, 顧客満足, 苦情対応, 行動規範, ナレッジ管理, 成熟度, コンタクトセンター品質
+- **トリガーキーワード（日）**: 品質管理, QMS, 品質方針, 品質目標, CAPA, 是正処置, 不適合, プロセス管理, 顧客要求, 顧客満足, 苦情対応, 行動規範, ナレッジ管理, 成熟度, コンタクトセンター品質, 証跡, 継続改善, 再発防止
 - **トリガーキーワード（英）**: quality management, QMS, quality policy, CAPA, nonconformity, process management, customer satisfaction, complaint handling, knowledge management, maturity
 - **専門性**: プロセス設計（品質KPI/是正/再発防止） / 顧客要求と変更管理の統合 / 継続改善（CAPA、内部レビュー）
 
@@ -148,7 +148,7 @@
 
 #### イノベーション（IM） (sustainability-innovation.md)
 - **主要ISO**: ISO 56001:2024
-- **トリガーキーワード（日）**: イノベーション, 新規事業, 探索, 検証, PoC, 知識化, 学習, 失敗からの学び, イノベーション方針, イノベーション目標, 創造性
+- **トリガーキーワード（日）**: イノベーション, 新規事業, 探索, 検証, PoC, 知識化, 学習, 失敗からの学び, イノベーション方針, イノベーション目標, 創造性, 自律エージェント, AI活用
 - **トリガーキーワード（英）**: innovation, new business, exploration, validation, PoC, knowledge creation, learning, innovation management, creativity
 - **専門性**: 探索→検証→実装のポートフォリオ運用 / 学習（失敗からの学び）と知識化の仕組み / 経営戦略への整合と資源配分
 
@@ -200,6 +200,7 @@
 | サステナビリティ戦略策定 | ESG | CEO, Environment, Energy |
 | 人材戦略策定 | CHRO | HR Analytics, COO |
 | イノベーション体制構築 | Innovation | CEO, PMO |
+| AI運用ハーネス設計 | CEO, ERM, CISO/ISMS | PMO, QMS, Innovation |
 | ナレッジ管理体制構築 | QMS | COO, ITSM |
 
 ### コード・技術系
