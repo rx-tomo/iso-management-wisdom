@@ -1,0 +1,31 @@
+name: New role or ISO update
+description: Suggest a new role, new standards coverage, or an update for revised ISO references.
+title: "role/iso-update: "
+labels:
+  - new-role
+  - iso-update
+body:
+  - type: textarea
+    id: request_type
+    attributes:
+      label: What are you proposing?
+      description: New role, revised standard coverage, terminology update, or role-composition change.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why should this repository cover it?
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Related standards or references
+      description: List the ISO standards or other references involved.
+  - type: textarea
+    id: affected_files
+    attributes:
+      label: Expected affected assets
+      description: Which files or areas likely need updates?

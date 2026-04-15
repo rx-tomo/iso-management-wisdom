@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discussion or broader idea
+    url: https://github.com/rx-tomo/iso-management-wisdom/discussions
+    about: Use Discussions when enabled for open-ended ideas, design topics, and community conversation.

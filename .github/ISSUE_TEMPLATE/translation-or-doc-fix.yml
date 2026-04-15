@@ -1,0 +1,26 @@
+name: Translation or doc fix
+description: Report wording, terminology, translation, or documentation problems.
+title: "docs/translation: "
+labels:
+  - documentation
+  - translation
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: Problem
+      description: What wording, translation, or documentation issue did you find?
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Which file, section, or example is affected?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: If you have a preferred wording, include it here.
