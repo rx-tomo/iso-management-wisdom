@@ -1,0 +1,35 @@
+prefix_rule(
+  pattern = ["pytest"],
+  decision = "allow",
+  justification = "Local tests can run without approval."
+)
+
+prefix_rule(
+  pattern = ["npm", "test"],
+  decision = "allow",
+  justification = "Project-local test execution is allowed."
+)
+
+prefix_rule(
+  pattern = ["git", "status"],
+  decision = "allow",
+  justification = "Read-only repository inspection is allowed."
+)
+
+prefix_rule(
+  pattern = ["gh", "pr", "view"],
+  decision = "prompt",
+  justification = "External service reads should still be reviewed."
+)
+
+prefix_rule(
+  pattern = ["git", "push"],
+  decision = "prompt",
+  justification = "Publishing changes requires approval."
+)
+
+prefix_rule(
+  pattern = ["rm"],
+  decision = "forbidden",
+  justification = "Destructive deletion is prohibited by default."
+)

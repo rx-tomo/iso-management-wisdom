@@ -1,4 +1,4 @@
 interface:
   display_name: "ISO Management Wisdom"
-  short_description: "ISO規格に基づく経営の叡智を23の専門ロールで即座に活用する"
-  default_prompt: "ISO規格の知見に基づいて、組織運営の課題を分析し、最適なロール（CEO/CISO/QMS/PMO等）を自動選定して助言・文書生成・チェック・インシデント対応・会議設計を実行する。"
+  short_description: "ISO規格に基づく経営知を23の専門ロールで活用し、AI運用ハーネス設計にも使える"
+  default_prompt: "ISO規格の知見に基づいて、組織運営やAI運用の課題を分析し、最適なロール（CEO/CISO/QMS/PMO等）を自動選定して助言・文書生成・チェック・インシデント対応・会議設計を実行する。必要に応じて方針、承認境界、リスク登録簿、レビュー会議体、ガードレールを設計する。"

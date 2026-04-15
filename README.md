@@ -1,14 +1,14 @@
 # iso-management-wisdom
 
-**ISO規格に基づく経営の叡智を、23の組織ロールで即座に活用する Claude Code スキル**
+**ISO規格に基づく経営の叡智を、23の組織ロールで即座に活用するスキル群**
 
-**Instantly leverage ISO-standard-based management wisdom through 23 organizational roles — a skill for Claude Code**
+**A skill set that turns ISO-based management wisdom into practical operating guidance through 23 organizational roles**
 
 ---
 
 <p align="center">
-  <a href="#-クイックスタート">クイックスタート</a> •
-  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-日本語">日本語</a> •
+  <a href="#-english">English</a> •
   <a href="#license">License</a>
 </p>
 
@@ -18,160 +18,188 @@
 
 ### 概要
 
-`/iso-management-wisdom` は、ISO 規格に蓄積された経営の叡智を **23 の専門ロール** として体系化した Claude Code スキルです。自然言語で課題を伝えるだけで、最適なロール（1〜3 個）が自動選定され、ISO 準拠の助言・ドキュメント・チェックリストを即座に生成します。
+`iso-management-wisdom` は、ISO 規格に蓄積された経営知を **23 の専門ロール** として体系化したスキルです。自然言語で課題を伝えるだけで、最適なロールを選び、ISO 準拠の助言、文書生成、レビュー、インシデント対応、会議設計へ変換します。
 
-> ISO 規格の原文は一切含まれていません。参照・チェックリスト・解釈ガイダンスのみで構成されています。
+このリポジトリは、従来の `Claude Code` 用スキルとして使えるだけでなく、`Codex` のハーネスエンジニアリングにも重ねて利用できます。つまり、AI に細かい作業指示を与える代わりに、`目的・ガードレール・承認境界・証跡・レビュー周期` を ISO ベースで定義するための知識資産として使えます。
+
+> ISO 規格の原文は含みません。参照、チェックリスト、テンプレート、解釈ガイダンスのみで構成されています。
 
 ### 特徴
 
-- **自然言語で起動** — `/iso-management-wisdom` と入力し、課題を伝えるだけ
-- **23 ロール自動選定** — 課題の文脈から最適なロールを 1〜3 個自動で選択
-- **5 つのアクションモード** — 助言、文書生成、チェック/レビュー、インシデント対応、会議/プロセス設計
-- **6 つのテンプレート** — RACI マトリクス、リスク登録簿、ギャップ分析、会議設計、インシデント対応、ポリシードラフト
-- **複合ロール対応** — セキュリティ事故なら CISO + Legal + BCM のように複数ロールを自動組み合わせ
-- **日英バイリンガル** — キーワードマッチングは日本語・英語両対応。完全な英語版スキルファイルも利用可能
+- **23 ロール自動選定**: CEO、CISO、QMS、PMO、Innovation などを課題の文脈から組み合わせ
+- **5 つのアクションモード**: 助言、文書生成、チェック/レビュー、インシデント対応、会議/プロセス設計
+- **6 つのテンプレート**: RACI、リスク登録簿、ギャップ分析、会議設計、インシデント対応、ポリシードラフト
+- **AI ハーネス設計に流用可能**: AI方針、承認境界、リスク許容度、レビュー会議体の設計に使える
+- **Claude Code / Codex の両対応導線**: 既存の Claude 用 install と、Codex 用 examples を同梱
+- **日英バイリンガル**: README、SKILL、サンプルを日英で利用可能
 
-### 23 の専門ロール
+### 使いどころ
 
-| 領域 | ロール | 主要 ISO 規格 |
-|------|--------|---------------|
-| **Governance** (3) | CEO | ISO 37000, ISO 31000, ISO 37001 |
-| | Board / Governance（取締役会・監督機関） | ISO 37000, ISO/IEC 38500 |
-| | Internal Audit（内部監査） | ISO 19011, ISO 37301 |
-| **Risk** (4) | ERM（リスク管理） | ISO 31000, IEC 31010 |
-| | Compliance / CMS（コンプライアンス） | ISO 37301, ISO 37001 |
-| | Legal（法務） | ISO 31022, ISO 37301 |
-| | BCM（事業継続） | ISO 22301, ISO 22316 |
-| **Security** (3) | CISO / ISMS | ISO/IEC 27001, ISO/IEC 27002 |
-| | Privacy / DPO（プライバシー） | ISO/IEC 27701, ISO/IEC 27018 |
-| | ITSM | ISO/IEC 20000-1, ISO/IEC 27035 |
-| **Operations** (7) | COO（経営企画） | ISO 37000, ISO 9004 |
-| | PMO / Portfolio | ISO 21502, ISO 21503, ISO 21504 |
-| | Project Manager | ISO 21502, ISO 21500 |
-| | QMS（品質管理） | ISO 9001, ISO 10002 |
-| | Procurement（調達） | ISO 20400, ISO/IEC 27036 |
-| | Customer Support（顧客対応） | ISO 10002, ISO 23592 |
-| | Asset Management（資産管理） | ISO 55001 |
-| **People** (2) | CHRO（人事） | ISO 30414, ISO 30415 |
-| | HR Analytics（人事分析） | ISO 30414, ISO 30408 |
-| **Sustainability** (4) | ESG | ISO 26000, ISO/UNDP DIS 53001 |
-| | Environment / EMS（環境） | ISO 14001, ISO 14064 |
-| | Energy / EnMS（エネルギー） | ISO 50001 |
-| | Innovation（イノベーション） | ISO 56001, ISO 56002 |
+- 情報セキュリティ、品質、コンプライアンス、ESG、人事、調達などの方針設計
+- 監査準備、ギャップ分析、マネジメントレビュー設計
+- インシデントや不適合に対する初動、是正、再発防止
+- コードや運用プロセスを ISO 観点でレビュー
+- AI 導入、AI ガバナンス、AI エージェント運用ハーネスの設計
 
-### 5 つのアクションモード
+### ハーネスエンジニアリングへの使い方
 
-| モード | トリガー例 | 出力 |
-|--------|-----------|------|
-| **A. Advisory（助言）** | 「情報セキュリティ方針で考慮すべきことは？」 | ISO 要求事項に基づく体系的な回答 |
-| **B. Document Generation（文書生成）** | 「BCP の方針書を作りたい」 | テンプレート + ISO 要求事項でドラフト生成 |
-| **C. Check / Review（チェック・レビュー）** | 「監査前に ISMS の現状を点検したい」 | ギャップ分析表 / チェックリスト |
-| **D. Incident Response（インシデント対応）** | 「個人情報の漏洩が発生した」 | 初動チェックリスト + 報告書ドラフト |
-| **E. Meeting / Process Design（会議・プロセス設計）** | 「マネジメントレビューの設計をしたい」 | アジェンダ + RACI + プロセスフロー |
+Codex のような自律エージェントに「何をやるか」を細かく指示するのではなく、「どう判断し、どこで止まり、何を記録するか」を定義するのがハーネスエンジニアリングです。`iso-management-wisdom` はその判断原理を ISO ベースで与えるために使えます。
+
+典型的には以下を設計します。
+
+- `Agent Charter`: 目的、非目的、成功指標、禁止事項
+- `Decision Rights Matrix`: AI が自律実行できる範囲と承認必須の境界
+- `Risk Register`: リスク、閾値、停止条件、エスカレーション
+- `Review Cadence`: 週次/月次のレビュー会議体と証跡確認
+- `CAPA Loop`: 不適合や失敗からの是正・再発防止
+
+このときに効く主なロールは `CEO + ERM + CISO/ISMS + PMO + QMS + Innovation` です。
 
 ### クイックスタート
 
-#### 前提条件
+#### Claude Code で使う
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic の CLI ツール) がインストール済みであること
+前提:
 
-#### インストール
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) がインストール済みであること
+
+インストール:
 
 ```bash
-git clone https://github.com/<your-username>/iso-management-wisdom.git
+git clone https://github.com/rx-tomo/iso-management-wisdom.git
 cd iso-management-wisdom
 ./install.sh
 ```
 
-`install.sh` は言語を選択してから `~/.claude/skills/iso-management-wisdom/` にコピーします。
-`--lang en` オプションで英語版をインストールできます（デフォルト: 日本語）。
+`install.sh` は現在 `~/.claude/skills/iso-management-wisdom/` へコピーします。`--lang en` で英語版を選べます。
 
-#### 使い方
+利用例:
 
-Claude Code のセッション内で以下のように呼び出します:
-
-```
+```text
 /iso-management-wisdom 情報セキュリティポリシーを新規策定したい。中小企業向けで、クラウド利用が中心。
 ```
 
-### 使用例
+#### Codex で使う
+
+Codex では installer はまだ同梱していません。代わりに `examples/codex/` の 3 ファイルを起点に、`AGENTS.md` と設定へ組み込みます。
+
+含まれる例:
+
+- [examples/codex/config.toml.example](examples/codex/config.toml.example)
+- [examples/codex/AGENTS.md.example](examples/codex/AGENTS.md.example)
+- [examples/codex/default.rules.example](examples/codex/default.rules.example)
+
+使い分け:
+
+- `config.toml.example`: モデル、sandbox、approval、profiles を定義
+- `AGENTS.md.example`: 目的、判断基準、承認境界、証跡要件を定義
+- `default.rules.example`: allow / prompt / forbid するコマンド群を定義
+
+### Codex 向け 3 ファイルの役割
+
+#### 1. `config.toml`
+
+Codex の実行環境を固定します。
+
+- どのモデルを使うか
+- `sandbox_mode` をどこまで許すか
+- `approval_policy` を granular / on-request にするか
+- `strategy / execution / research` の profile をどう分けるか
+
+#### 2. `AGENTS.md`
+
+AI の行動原理を定義します。
+
+- 任務
+- 判断原理
+- 承認不要の作業
+- 承認必須の作業
+- 証跡として残す項目
+- 週次/月次レビュー
+
+#### 3. `rules`
+
+実行統制を定義します。
+
+- テストやローカル検証を allow
+- 外部反映や配布を prompt
+- 破壊的操作を forbid
+
+### 利用例
 
 #### 例 1: セキュリティポリシーの策定
 
-```
-/iso-management-wisdom 情報セキュリティポリシーを新規に策定したい。
-従業員200名、クラウドサービスを多く利用している。
+```text
+/iso-management-wisdom 情報セキュリティポリシーを新規に策定したい。従業員200名、クラウドサービスを多く利用している。
 ```
 
-> 自動選定ロール: **CISO/ISMS** + **CEO**
-> モード: B (Document Generation)
-> 出力: ISO/IEC 27001 に基づくポリシードラフト + 経営者承認プロセスの提案
+自動選定ロール:
+`CISO/ISMS + CEO`
 
 #### 例 2: インシデント対応
 
-```
-/iso-management-wisdom 顧客の個人情報が外部に漏洩した可能性がある。
-初動対応と報告書の作成を支援してほしい。
+```text
+/iso-management-wisdom 顧客の個人情報が外部に漏洩した可能性がある。初動対応と報告書の作成を支援してほしい。
 ```
 
-> 自動選定ロール: **CISO/ISMS** + **Privacy/DPO** + **Legal**
-> モード: D (Incident Response)
-> 出力: 初動チェックリスト + 関係者通知テンプレート + インシデント報告書ドラフト
+自動選定ロール:
+`CISO/ISMS + Privacy/DPO + Legal`
 
 #### 例 3: 監査準備
 
-```
+```text
 /iso-management-wisdom 来月のISO 9001外部審査に向けて、QMSの現状をチェックしたい。
 ```
 
-> 自動選定ロール: **QMS** + **Internal Audit**
-> モード: C (Check / Review)
-> 出力: ISO 9001 条項ベースのギャップ分析表 + 指摘事項リスト
+自動選定ロール:
+`QMS + Internal Audit`
 
-#### 例 4: ESG 報告の設計
+#### 例 4: AIオペレーションハーネスの設計
 
-```
-/iso-management-wisdom ESGレポートの構成と開示項目を設計したい。
-GHG排出量の算定方法も含めて。
+```text
+/iso-management-wisdom 新規事業向けに、Codex を自律稼働させるための運用ハーネスを設計したい。目的、承認境界、リスク登録簿、レビュー会議体を整備したい。
 ```
 
-> 自動選定ロール: **ESG** + **Environment/EMS** + **COO**
-> モード: A (Advisory) + B (Document Generation)
-> 出力: 開示フレームワークの比較 + GHG 算定プロセス設計 + レポート構成案
+自動選定ロール:
+`CEO + ERM + CISO/ISMS + PMO + QMS + Innovation`
+
+期待される出力:
+
+- AI運用方針
+- Decision Rights Matrix
+- Risk Register
+- Review cadence
+- ガードレール案
 
 ### ディレクトリ構成
 
-```
+```text
 iso-management-wisdom/
 ├── README.md
 ├── LICENSE
 ├── install.sh
+├── examples/
+│   └── codex/
+│       ├── AGENTS.md.example
+│       ├── config.toml.example
+│       └── default.rules.example
 └── skill/
     └── iso-management-wisdom/
-        ├── ja/                        # 日本語版
+        ├── ja/
         │   ├── SKILL.md
+        │   ├── agents/openai.yaml
         │   └── references/
         │       ├── role-index.md
         │       ├── roles/ (23)
         │       └── templates/ (6)
-        └── en/                        # English version
+        └── en/
             ├── SKILL.md
+            ├── agents/openai.yaml
             └── references/
                 ├── role-index.md
                 ├── roles/ (23)
                 └── templates/ (6)
 ```
-
-### テンプレート一覧
-
-| テンプレート | 用途 | 使用例 |
-|-------------|------|--------|
-| **RACI Matrix** | 責任分担の明確化 | プロジェクト体制設計、監査対応 |
-| **Risk Register** | リスクの特定・評価・対応計画 | ERM、ISMS リスクアセスメント |
-| **Gap Analysis** | 現状と ISO 要求事項の差分分析 | 認証準備、内部監査 |
-| **Meeting Design** | 会議体の設計（アジェンダ・役割・頻度） | マネジメントレビュー、監査報告会 |
-| **Incident Response** | インシデント対応の初動〜報告 | セキュリティ事故、個人情報漏洩 |
-| **Policy Draft** | 方針書・規程のドラフト | セキュリティポリシー、BCM 方針 |
 
 ---
 
@@ -179,180 +207,141 @@ iso-management-wisdom/
 
 ### Overview
 
-`/iso-management-wisdom` is a Claude Code skill that organizes management wisdom accumulated in ISO standards into **23 specialized organizational roles**. Simply describe your challenge in natural language, and the skill automatically selects the 1–3 most relevant roles to deliver ISO-aligned advice, documents, and checklists.
+`iso-management-wisdom` turns management wisdom embedded in ISO standards into **23 specialized organizational roles**. Describe a problem in natural language and the skill selects the right roles to produce ISO-aligned advice, documents, reviews, incident responses, and governance artifacts.
 
-> No ISO standard text is copied. This skill contains only references, checklists, and interpretive guidance.
+The repository remains usable as a `Claude Code` skill, and it can also be used as a knowledge layer for `Codex` harness engineering. In that mode, the value is not "giving the AI more instructions," but defining `mission, guardrails, approval boundaries, evidence requirements, and review cadence` using ISO-based management patterns.
+
+> This repository does not include ISO standard text. It contains references, checklists, templates, and interpretive guidance only.
 
 ### Features
 
-- **Natural language invocation** — Type `/iso-management-wisdom` and describe your challenge
-- **23 auto-selected roles** — Optimal roles (1–3) are chosen based on context
-- **5 action modes** — Advisory, Document Generation, Check/Review, Incident Response, Meeting/Process Design
-- **6 templates** — RACI matrix, Risk register, Gap analysis, Meeting design, Incident response, Policy draft
-- **Multi-role composition** — e.g., a security incident automatically combines CISO + Legal + BCM
-- **Bilingual** — Keyword matching supports both Japanese and English. Full English skill files are now available
+- **23 auto-selected roles**: Combine CEO, CISO, QMS, PMO, Innovation, and others based on context
+- **5 action modes**: Advisory, document generation, check/review, incident response, meeting/process design
+- **6 templates**: RACI, risk register, gap analysis, meeting design, incident response, policy draft
+- **Reusable for agent harnesses**: Helps define AI governance, approval boundaries, risk appetite, and review bodies
+- **Dual guidance for Claude Code and Codex**: Existing Claude installer plus Codex examples
+- **Bilingual assets**: README, SKILL files, and examples in Japanese and English
 
-### 23 Specialized Roles
+### Where It Fits
 
-| Domain | Role | Key ISO Standards |
-|--------|------|-------------------|
-| **Governance** (3) | CEO | ISO 37000, ISO 31000, ISO 37001 |
-| | Board / Governance | ISO 37000, ISO/IEC 38500 |
-| | Internal Audit | ISO 19011, ISO 37301 |
-| **Risk** (4) | ERM | ISO 31000, IEC 31010 |
-| | Compliance / CMS | ISO 37301, ISO 37001 |
-| | Legal | ISO 31022, ISO 37301 |
-| | BCM | ISO 22301, ISO 22316 |
-| **Security** (3) | CISO / ISMS | ISO/IEC 27001, ISO/IEC 27002 |
-| | Privacy / DPO | ISO/IEC 27701, ISO/IEC 27018 |
-| | ITSM | ISO/IEC 20000-1, ISO/IEC 27035 |
-| **Operations** (7) | COO | ISO 37000, ISO 9004 |
-| | PMO / Portfolio | ISO 21502, ISO 21503, ISO 21504 |
-| | Project Manager | ISO 21502, ISO 21500 |
-| | QMS | ISO 9001, ISO 10002 |
-| | Procurement | ISO 20400, ISO/IEC 27036 |
-| | Customer Support | ISO 10002, ISO 23592 |
-| | Asset Management | ISO 55001 |
-| **People** (2) | CHRO | ISO 30414, ISO 30415 |
-| | HR Analytics | ISO 30414, ISO 30408 |
-| **Sustainability** (4) | ESG | ISO 26000, ISO/UNDP DIS 53001 |
-| | Environment / EMS | ISO 14001, ISO 14064 |
-| | Energy / EnMS | ISO 50001 |
-| | Innovation | ISO 56001, ISO 56002 |
+- Policy and operating-model design across security, quality, compliance, ESG, HR, and procurement
+- Audit preparation, gap analysis, and management review design
+- Incident response, corrective action, and recurrence prevention
+- ISO-oriented reviews of code, docs, and workflows
+- AI governance, agent operations, and Codex harness design
 
-### 5 Action Modes
+### Using It for Harness Engineering
 
-| Mode | Trigger Example | Output |
-|------|----------------|--------|
-| **A. Advisory** | "What should I consider for an information security policy?" | Systematic advice based on ISO requirements |
-| **B. Document Generation** | "I need to create a BCP policy" | Draft generated from templates + ISO requirements |
-| **C. Check / Review** | "Review our ISMS before the external audit" | Gap analysis table / Checklist |
-| **D. Incident Response** | "A personal data breach has occurred" | First-response checklist + Report draft |
-| **E. Meeting / Process Design** | "Design a management review meeting" | Agenda + RACI + Process flow |
+Harness engineering is about defining how an autonomous agent should decide, stop, escalate, and leave evidence. `iso-management-wisdom` can supply that operating logic using ISO-based roles and controls.
+
+Typical deliverables:
+
+- `Agent Charter`: mission, non-goals, success metrics, prohibited actions
+- `Decision Rights Matrix`: what the AI can do alone vs. what needs approval
+- `Risk Register`: thresholds, stopping conditions, escalation paths
+- `Review Cadence`: weekly/monthly governance and evidence reviews
+- `CAPA Loop`: corrective action and recurrence prevention
+
+The most common role mix is `CEO + ERM + CISO/ISMS + PMO + QMS + Innovation`.
 
 ### Quick Start
 
-#### Prerequisites
+#### Use with Claude Code
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (Anthropic's CLI tool) installed
+Prerequisite:
 
-#### Installation
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed
+
+Install:
 
 ```bash
-git clone https://github.com/<your-username>/iso-management-wisdom.git
+git clone https://github.com/rx-tomo/iso-management-wisdom.git
 cd iso-management-wisdom
-./install.sh
+./install.sh --lang en
 ```
 
-`install.sh` prompts for language selection, then copies to `~/.claude/skills/iso-management-wisdom/`.
-Use `--lang en` to install the English version (default: Japanese).
+The current installer copies the skill into `~/.claude/skills/iso-management-wisdom/`.
 
-#### Usage
+Usage:
 
-Inside a Claude Code session:
-
-```
+```text
 /iso-management-wisdom I need to create an information security policy for a 200-person company using cloud services extensively.
 ```
 
-### Usage Examples
+#### Use with Codex
+
+Codex support is currently example-based rather than installer-based. Start from the three files under `examples/codex/`.
+
+Included examples:
+
+- [examples/codex/config.toml.example](examples/codex/config.toml.example)
+- [examples/codex/AGENTS.md.example](examples/codex/AGENTS.md.example)
+- [examples/codex/default.rules.example](examples/codex/default.rules.example)
+
+Roles:
+
+- `config.toml.example`: model, sandbox, approvals, profiles
+- `AGENTS.md.example`: mission, decision principles, approval boundaries, evidence rules
+- `default.rules.example`: allow / prompt / forbid command controls
+
+### Examples
 
 #### Example 1: Security Policy Creation
 
-```
-/iso-management-wisdom Create an information security policy for a mid-size company (200 employees) heavily reliant on cloud services.
+```text
+/iso-management-wisdom Create an information security policy for a 200-person company heavily using cloud services.
 ```
 
-> Auto-selected roles: **CISO/ISMS** + **CEO**
-> Mode: B (Document Generation)
-> Output: Policy draft based on ISO/IEC 27001 + executive approval process proposal
+Selected roles:
+`CISO/ISMS + CEO`
 
 #### Example 2: Incident Response
 
-```
+```text
 /iso-management-wisdom Customer personal data may have been leaked externally. Help with first response and report creation.
 ```
 
-> Auto-selected roles: **CISO/ISMS** + **Privacy/DPO** + **Legal**
-> Mode: D (Incident Response)
-> Output: First-response checklist + Stakeholder notification template + Incident report draft
+Selected roles:
+`CISO/ISMS + Privacy/DPO + Legal`
 
 #### Example 3: Audit Preparation
 
-```
+```text
 /iso-management-wisdom Check our QMS status before next month's ISO 9001 external audit.
 ```
 
-> Auto-selected roles: **QMS** + **Internal Audit**
-> Mode: C (Check / Review)
-> Output: Gap analysis table based on ISO 9001 clauses + Findings list
+Selected roles:
+`QMS + Internal Audit`
 
-#### Example 4: ESG Reporting Design
+#### Example 4: Agent Harness Design
 
-```
-/iso-management-wisdom Design an ESG report structure and disclosure items, including GHG emission calculation methodology.
-```
-
-> Auto-selected roles: **ESG** + **Environment/EMS** + **COO**
-> Mode: A (Advisory) + B (Document Generation)
-> Output: Disclosure framework comparison + GHG calculation process design + Report structure proposal
-
-### Directory Structure
-
-```
-iso-management-wisdom/
-├── README.md
-├── LICENSE
-├── install.sh
-└── skill/
-    └── iso-management-wisdom/
-        ├── ja/                        # Japanese version
-        │   ├── SKILL.md
-        │   └── references/
-        │       ├── role-index.md
-        │       ├── roles/ (23)
-        │       └── templates/ (6)
-        └── en/                        # English version
-            ├── SKILL.md
-            └── references/
-                ├── role-index.md
-                ├── roles/ (23)
-                └── templates/ (6)
+```text
+/iso-management-wisdom Design an operating harness for Codex to run autonomously on a new business initiative. I need mission boundaries, approvals, a risk register, and review cadence.
 ```
 
-### Templates
+Selected roles:
+`CEO + ERM + CISO/ISMS + PMO + QMS + Innovation`
 
-| Template | Purpose | Use Case |
-|----------|---------|----------|
-| **RACI Matrix** | Clarify responsibilities | Project structure, audit response |
-| **Risk Register** | Identify, assess, and plan risk treatment | ERM, ISMS risk assessment |
-| **Gap Analysis** | Analyze gaps against ISO requirements | Certification prep, internal audit |
-| **Meeting Design** | Design meeting structure (agenda, roles, cadence) | Management review, audit debrief |
-| **Incident Response** | First response through reporting | Security incidents, data breaches |
-| **Policy Draft** | Draft policies and procedures | Security policy, BCM policy |
+Expected output:
+
+- AI operating policy
+- Decision rights matrix
+- Risk register
+- Review cadence
+- Guardrail proposals
 
 ---
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
+Pull requests are welcome. If you update role mappings, templates, or governance guidance, please keep the Japanese and English assets aligned.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
 
 ## Disclaimer / 免責事項
 
-**日本語**: 本スキルは ISO 規格の公式製品ではありません。ISO 規格の原文は一切含まれておらず、規格への参照、チェックリスト、解釈に基づくガイダンスのみで構成されています。ISO 規格の正式な内容については、[ISO 公式サイト](https://www.iso.org/) から正規の規格書を入手してください。
+**日本語**: 本リポジトリは ISO の公式製品ではありません。ISO 規格の原文は含まず、参照、チェックリスト、テンプレート、解釈ガイダンスのみを提供します。正規の規格本文は [ISO 公式サイト](https://www.iso.org/) から入手してください。
 
-**English**: This skill is **not** an official ISO product. It contains no ISO standard text — only references, checklists, and interpretive guidance. For the authoritative content of ISO standards, please obtain the official documents from [iso.org](https://www.iso.org/).
+**English**: This repository is **not** an official ISO product. It contains no ISO standard text and provides references, checklists, templates, and interpretive guidance only. Obtain authoritative standards from [iso.org](https://www.iso.org/).

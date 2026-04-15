@@ -6,7 +6,7 @@
 
 #### CEO (governance-ceo.md)
 - **Primary ISO**: ISO 37000:2021, ISO 31000:2018, ISO 37001:2025, ISO/IEC 38500:2024, ISO/IEC 27001:2022, ISO/IEC 42001:2023, ISO 21504:2022, ISO 26000:2010, ISO 56001:2024, ISO/UNDP DIS 53001
-- **Trigger Keywords**: strategy, executive, top management, policy approval, management review, resource allocation, investment decision, governance, anti-bribery, AI policy, SDGs
+- **Trigger Keywords**: strategy, executive, top management, policy approval, management review, resource allocation, investment decision, governance, anti-bribery, AI policy, SDGs, AI governance, agent policy, operating charter
 - **Expertise**: Sets policy and priorities, allocates resources / Makes accept/avoid/mitigate decisions on critical risks / Drives execution through governance bodies and management reviews
 
 #### Board of Directors / Supervisory Body (governance-board.md)
@@ -23,7 +23,7 @@
 
 #### Enterprise Risk Management (ERM) (risk-erm.md)
 - **Primary ISO**: ISO 31000:2018, ISO/IEC 27001:2022, ISO/IEC 42001:2023, ISO 31022:2020, ISO 55001:2024, ISO 37003:2025, IEC 31010:2019, ISO/IEC 27005:2022, ISO 14090:2019, ISO 14091:2021
-- **Trigger Keywords**: risk management, ERM, risk assessment, risk register, risk appetite, risk criteria, risk treatment, enterprise risk, fraud risk, climate risk, vulnerability assessment
+- **Trigger Keywords**: risk management, ERM, risk assessment, risk register, risk appetite, risk criteria, risk treatment, enterprise risk, fraud risk, climate risk, vulnerability assessment, stopping condition, guardrail, escalation threshold
 - **Expertise**: Risk criteria design (scales, acceptance thresholds) / Risk register operations (review, corrective actions, escalation) / Cross-enterprise risk integration (business, legal, IT, ESG)
 
 #### Compliance (CMS) (risk-compliance.md)
@@ -45,7 +45,7 @@
 
 #### CISO/ISMS (security-ciso.md)
 - **Primary ISO**: ISO/IEC 38500:2024, ISO/IEC 27001:2022, ISO/IEC 42001:2023, ISO/IEC 27701:2025, ISO/IEC 20000-1:2018, ISO/IEC 27002:2022, ISO/IEC 27005:2022, ISO/IEC 27014:2020, ISO/IEC 27035-1:2023, ISO/IEC 27032:2023, ISO/IEC 27034-1:2011, ISO/IEC 27017:2015, ISO/IEC 27018:2025, ISO/IEC 27036-2:2022, ISO/IEC 27036-3:2023
-- **Trigger Keywords**: information security, ISMS, CISO, SoA, controls, incident response, security policy, cloud security, supply chain security, application security, vulnerability, penetration test, cyber security, AI governance
+- **Trigger Keywords**: information security, ISMS, CISO, SoA, controls, incident response, security policy, cloud security, supply chain security, application security, vulnerability, penetration test, cyber security, AI governance, approval boundary, execution control
 - **Expertise**: Risk-based control design / Incident response, drills, and improvement operations / Audit readiness (evidence trails, SoA, reviews)
 
 #### Privacy/DPO (security-privacy-dpo.md)
@@ -67,7 +67,7 @@
 
 #### PMO / Portfolio (ops-pmo.md)
 - **Primary ISO**: ISO 21502:2020, ISO 21503:2022, ISO 21504:2022, ISO 21505:2017, ISO 21500:2021, ISO 21506:2024, ISO 21508:2018, ISO 21511:2018, ISO 21512:2024
-- **Trigger Keywords**: PMO, portfolio management, program management, EVM, WBS, investment decision, earned value, benefit management, project governance
+- **Trigger Keywords**: PMO, portfolio management, program management, EVM, WBS, investment decision, earned value, benefit management, project governance, review cadence, approval flow
 - **Expertise**: Investment decision frameworks (prioritization, termination, benefits) / Cross-cutting templates and standards development and adoption / Aggregates information for management reviews
 
 #### Project Manager (PM) (ops-pm.md)
@@ -77,7 +77,7 @@
 
 #### Quality Management (QMS) (ops-qms.md)
 - **Primary ISO**: ISO 19011:2018, ISO 9001:2015, ISO 21502:2020, ISO 10002:2018, ISO 10004:2018, ISO 30401:2018, IEC 31010:2019, ISO 10001:2018, ISO 18295-1:2017, ISO 9004:2018
-- **Trigger Keywords**: quality management, QMS, quality policy, CAPA, nonconformity, process management, customer satisfaction, complaint handling, knowledge management, maturity
+- **Trigger Keywords**: quality management, QMS, quality policy, CAPA, nonconformity, process management, customer satisfaction, complaint handling, knowledge management, maturity, evidence trail, continual improvement, recurrence prevention
 - **Expertise**: Process design (quality KPIs, corrective actions, recurrence prevention) / Integration of customer requirements and change management / Continual improvement (CAPA, internal reviews)
 
 #### Procurement (ops-procurement.md)
@@ -126,7 +126,7 @@
 
 #### Innovation Management (IM) (sustainability-innovation.md)
 - **Primary ISO**: ISO 56001:2024
-- **Trigger Keywords**: innovation, new business, exploration, validation, PoC, knowledge creation, learning, innovation management, creativity
+- **Trigger Keywords**: innovation, new business, exploration, validation, PoC, knowledge creation, learning, innovation management, creativity, autonomous agent, AI leverage
 - **Expertise**: Portfolio management across exploration, validation, and implementation / Learning (from failures) and knowledge capture systems / Alignment with corporate strategy and resource allocation
 
 ---
@@ -177,6 +177,7 @@
 | Sustainability strategy development | ESG | CEO, Environment, Energy |
 | Talent strategy development | CHRO | HR Analytics, COO |
 | Innovation framework setup | Innovation | CEO, PMO |
+| AI operating harness design | CEO, ERM, CISO/ISMS | PMO, QMS, Innovation |
 | Knowledge management framework setup | QMS | COO, ITSM |
 
 ### Code & Technical Scenarios
