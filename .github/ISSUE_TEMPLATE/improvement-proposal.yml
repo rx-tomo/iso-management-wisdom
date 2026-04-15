@@ -1,0 +1,30 @@
+name: Improvement proposal
+description: Propose an improvement to existing guidance, examples, or repository structure.
+title: "improvement: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: What is missing, unclear, or weak today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacted areas
+      description: README, docs, examples, SKILL, role-index, templates, or other assets.
+  - type: textarea
+    id: roles
+    attributes:
+      label: Related roles or ISO references
+      description: Which roles, standards, or governance areas are related?

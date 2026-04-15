@@ -1,0 +1,31 @@
+name: Harness use case
+description: Share or request a harness-engineering use case for Codex or similar agents.
+title: "harness-use-case: "
+labels:
+  - governance
+  - discussion-needed
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What kind of repo, team, or business setting are you working in?
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should the agent be able to do?
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Boundaries and approvals
+      description: What must stay proposal-only, and what can be autonomous?
+  - type: textarea
+    id: expected_output
+    attributes:
+      label: Expected guidance
+      description: What would make this repository more useful for your harness design?
